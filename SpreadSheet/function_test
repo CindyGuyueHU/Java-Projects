@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><SpreadSheet><IndexedCell><CellIndex>A1</CellIndex><Cell>=1</Cell></IndexedCell><IndexedCell><CellIndex>A2</CellIndex><Cell>=3^2</Cell></IndexedCell><IndexedCell><CellIndex>A3</CellIndex><Cell>=A1+A2</Cell></IndexedCell><IndexedCell><CellIndex>B1</CellIndex><Cell>=7</Cell></IndexedCell><IndexedCell><CellIndex>B2</CellIndex><Cell>=B3+B1</Cell></IndexedCell><IndexedCell><CellIndex>B3</CellIndex><Cell>=15</Cell></IndexedCell><IndexedCell><CellIndex>C1</CellIndex><Cell>=sum(A1,B3)</Cell></IndexedCell><IndexedCell><CellIndex>C2</CellIndex><Cell>=con()</Cell></IndexedCell><IndexedCell><CellIndex>C3</CellIndex><Cell>= - B11</Cell></IndexedCell><IndexedCell><CellIndex>C6</CellIndex><Cell>=summax(A1,A3,B1,B3,C1,C3)</Cell></IndexedCell><IndexedCell><CellIndex>D1</CellIndex><Cell>=C3 + count(A1,B3)</Cell></IndexedCell><IndexedCell><CellIndex>D2</CellIndex><Cell>=add(2, 10)</Cell></IndexedCell><IndexedCell><CellIndex>D3</CellIndex><Cell>=max(A1,C3)</Cell></IndexedCell><IndexedCell><CellIndex>E1</CellIndex><Cell>=qual(B2,B3)</Cell></IndexedCell><IndexedCell><CellIndex>E2</CellIndex><Cell>=qual(F1,F2)</Cell></IndexedCell><IndexedCell><CellIndex>F1</CellIndex><Cell>=7</Cell></IndexedCell><IndexedCell><CellIndex>F2</CellIndex><Cell>=7</Cell></IndexedCell><IndexedCell><CellIndex>B11</CellIndex><Cell>=23</Cell></IndexedCell><FunctionText><Functions>sum(cell c1 , cell c2) {
+double m;
+cell i;
+m = 0;
+for i in range (c1, c2) {
+m = m + i;
+};
+return m;
+}
+
+max(cell c1 , cell c2) {
+double m;
+cell i;
+m = c1;
+for i in range (c1, c2) {
+if (i &gt; m) {
+m = i;} else {
+};
+};
+return m;
+}
+
+min(cell c1 , cell c2) {
+double m;
+cell i;
+m = c1;
+for i in range (c1, c2) {
+if (i &lt; m) {
+m = i;} else {
+};
+};
+return m;
+}
+
+con() {
+return 25;
+}
+
+count(cell c1 , cell c2) {
+double m;
+cell i;
+m = 0;
+for i in range (c1, c2) {
+m = m + 1;
+};
+return m;
+}
+
+add(double d1 , double d2) {
+double m;
+double i;
+m = 0;
+for i in range (d1, d2) {
+m = m + i;
+};
+return m;
+}
+
+
+
+
+qual (cell c1, cell c2) {
+double m;
+if (c1 = c2) {
+m=0;
+}else{
+m=1;
+};
+return m;
+}
+
+summax(cell c1, cell c2, cell c3, cell c4, cell c5, cell c6) {
+double m;
+double n;
+double q;
+double r;
+cell i;
+m = 0;
+n = c1;
+q = c3;
+r = c5;
+
+for i in range (c1, c2) {
+if (i &gt; n) {
+n = i;} else {
+};
+};
+
+
+for i in range (c3, c4) {
+if (i &gt; q) {
+q = i;} else {
+};
+};
+
+for i in range (c5, c6) {
+if (i &gt; r) {
+r = i;} else {
+};
+};
+
+m = n + q + r;
+
+return m;
+}</Functions></FunctionText></SpreadSheet>
